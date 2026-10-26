@@ -1,0 +1,23 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { ContentPage, TextSection } from "@/components/site-chrome";
+
+export const Route = createFileRoute("/privacy-policy")({
+  head: () => ({ meta: [
+    { title: "ScamGuide Privacy Policy" },
+    { name: "description", content: "How ScamGuide handles contact-form information, technical data, cookies, privacy choices, and data security." },
+    { property: "og:title", content: "ScamGuide Privacy Policy" },
+    { property: "og:description", content: "How ScamGuide handles contact-form information, technical data, cookies, privacy choices, and data security." },
+    { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" },
+  ] }), component: Page,
+});
+function Page() { return <ContentPage eyebrow="Privacy" title="ScamGuide Privacy Policy" intro="This Privacy Policy explains how ScamGuide handles information when you visit or interact with this website.">
+    <TextSection title="Information you provide"><p>The contact form currently validates an email address and comment in your browser only. Delivery is not configured, so the form does not transmit or store these fields and cannot receive messages. Once delivery is enabled, this policy must be updated to identify processing and retention practices. Do not enter passwords, financial details, verification codes, or other sensitive information.</p><p>Form entries are not displayed publicly and do not automatically subscribe you to marketing.</p></TextSection>
+    <TextSection title="Technical information"><p>The website host may process limited technical information needed to deliver and secure the site, such as IP address, browser or device information, request times, and server logs. ScamGuide does not install separate advertising pixels or remarketing tools. The Tawk.to chat widget loads on website pages and may use cookies or browser storage and collect technical and visit information to operate chat.</p></TextSection>
+    <TextSection title="Visitor chat"><p>Visitor chat is provided by Tawk.to for general educational inquiries, not Microsoft or technical-support services. When you use chat, Tawk.to processes your messages and any details or files you choose to share, together with technical information such as your IP address, browser, and page visits. Messages are available to the site’s chat agents and processed by Tawk.to. Do not share passwords, verification codes, banking information, identification numbers, or other sensitive personal information.</p><p>Chat opens when an agent sends a message; you can minimize or close it. You can manage cookies through your browser settings or block the widget, though chat may then be unavailable. See <a href="https://www.tawk.to/privacy-policy/" target="_blank" rel="noopener noreferrer" className="font-bold text-primary underline">Tawk.to’s Privacy Policy</a> for its processing practices. Chat retention depends on the site owner’s Tawk.to settings; no specific retention period is promised here.</p></TextSection>
+    <TextSection title="How information may be used"><p>Technical information may be used to operate and secure the website and prevent abuse. Google Fonts provides the website’s fonts; loading them sends technical request information, including your IP address, to Google. Hosting and preview error-reporting services may process diagnostic information. No contact delivery provider is currently configured.</p></TextSection>
+    <TextSection title="Retention and security"><p>Information should be retained only as long as reasonably needed for the purposes described above or to meet applicable obligations. Reasonable safeguards can reduce risk, but no internet transmission or storage system can be guaranteed completely secure.</p></TextSection>
+    <TextSection title="External links"><p>ScamGuide links to third-party websites, including official product resources. Their privacy practices are governed by their own policies.</p></TextSection>
+    <TextSection title="Children’s privacy"><p>ScamGuide is a general-audience educational resource and is not directed to children. We do not knowingly seek personal information from children.</p></TextSection>
+    <TextSection title="Your choices and rights"><p>Depending on where you live, you may have rights to request access, correction, deletion, restriction, or objection concerning personal information. Contact details: [SCAMGUIDE OWNER: ADD CONTACT EMAIL].</p></TextSection>
+    <TextSection title="Changes to this policy"><p>This policy may be updated when the website or its practices change. Material changes will be reflected by the date below.</p><p>Last updated: October 26, 2026.</p></TextSection>
+  </ContentPage>; }
